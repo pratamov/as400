@@ -1,0 +1,10 @@
+package com.profisien.as400;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class As400Converter {
+	
+	
+	
+}

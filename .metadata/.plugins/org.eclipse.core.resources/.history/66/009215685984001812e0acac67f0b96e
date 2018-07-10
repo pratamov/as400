@@ -1,0 +1,45 @@
+package com.profisien.as400;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.apache.camel.CamelContext;
+import org.springframework.stereotype.Component;
+import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
+
+@Component
+public class As400DataFormat {
+	
+	private final List<Converter> requestConverters;
+	
+	
+	public As400DataFormat(CamelContext camelContext) throws ParserConfigurationException, SAXException, IOException {
+		
+		InputStream requestInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		parseRequestFormater(requestInputStream);
+		
+		InputStream responseInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		parseResponseFormater(responseInputStream);
+
+	}
+	
+	private void parseRequestFormater(InputStream xmlInputStream) throws ParserConfigurationException, SAXException, IOException {
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Element requestFormatXml = dBuilder.parse(xmlInputStream).getDocumentElement();
+		requestFormatXml.normalize();
+	}
+	
+	private void parseResponseFormater(InputStream xmlInputStream) throws ParserConfigurationException, SAXException, IOException {
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Element responseFormatXml = dBuilder.parse(xmlInputStream).getDocumentElement();
+		responseFormatXml.normalize();
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.profisien.as400.converter;
+
+public class BinaryHexConverter implements Converter{
+
+}

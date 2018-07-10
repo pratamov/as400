@@ -1,0 +1,11 @@
+package com.profisien.as400.component;
+
+import org.springframework.stereotype.Component;
+
+@Component("socketConnection")
+public class SocketConnection {
+	
+	private static int i = 0;
+	
+	
+}

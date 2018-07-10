@@ -1,0 +1,15 @@
+package com.profisien.as400;
+
+import org.apache.camel.builder.RouteBuilder;
+
+@Component
+public class As400ClientRoute extends RouteBuilder {
+
+	@Override
+	public void configure() throws Exception {
+		
+		from("timer://foo?period=6000").to("log:bar");
+		
+	}
+
+}

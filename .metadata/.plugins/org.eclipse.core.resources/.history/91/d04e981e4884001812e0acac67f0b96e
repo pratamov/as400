@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<socket-header>
+	<SKTHEAD type="9B">5</SKTHEAD>
+	<SKTHEAD type="9B">5</SKTHEAD>
+	<SKTHEAD type="9B">5</SKTHEAD>
+	<SKTHEAD type="9B">5</SKTHEAD>
+	<SKTHEAD type="9B">5</SKTHEAD>
+	<SKTHEAD type="9B">5</SKTHEAD>
+</socket-header>

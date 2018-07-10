@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<group name="SocketHeader">
+		<field name="SKTHEAD" type="EBCDIC" length="5"/>
+		<field name="SKTHEAD" type="EBCDIC" length="15"/>
+	</group>
+</message>

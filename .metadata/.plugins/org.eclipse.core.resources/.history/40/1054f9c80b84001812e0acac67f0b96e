@@ -1,0 +1,6 @@
+package com.profisien.as400;
+
+@Component
+public class As400SocketClientRoute {
+
+}

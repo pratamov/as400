@@ -1,0 +1,36 @@
+package com.profisien.as400.converter;
+
+public class UpackedConverter implements Converter{
+	
+	private final int length;
+	private final int decimalPlaces;
+	
+	public UpackedConverter(int length) {
+		this.length = length;
+		this.decimalPlaces = 0;
+	}
+	
+	public UpackedConverter(int length, int decimalPlaces) {
+		this.length = length;
+		this.decimalPlaces = decimalPlaces;
+	}
+	
+	@Override
+	public String unmarshal(byte[] input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public byte[] marshal(String input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public byte[] marshal() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

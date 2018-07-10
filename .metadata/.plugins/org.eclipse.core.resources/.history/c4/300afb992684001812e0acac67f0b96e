@@ -1,0 +1,6 @@
+package com.profisien.as400.component;
+
+@Component("myBean")
+public class SocketConnection {
+
+}

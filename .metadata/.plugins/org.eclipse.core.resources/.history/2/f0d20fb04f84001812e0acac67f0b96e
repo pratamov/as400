@@ -1,0 +1,60 @@
+package com.profisien.as400.component;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.apache.camel.CamelContext;
+import org.apache.commons.io.IOUtils;
+import org.springframework.stereotype.Component;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+@Component("socketConnection")
+public class SocketConnection {
+
+	private final Document requestFormatXml;
+	private final Document responseFormatXml;
+	
+	public SocketConnection(CamelContext camelContext) throws IOException, ParserConfigurationException, SAXException {
+		
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		
+		InputStream requestInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		String requestFormat = IOUtils.toString(requestInputStream, Charset.forName("UTF-8"));
+		this.responseFormatXml = dBuilder.parse(requestFormat);
+		
+		InputStream responseInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		String responseFormat = IOUtils.toString(responseInputStream, Charset.forName("UTF-8"));
+		this.requestFormatXml = dBuilder.parse(responseFormat);
+		
+	}
+	
+	public byte[] marshal() {
+		return null;
+	}
+	
+	public byte[] invoke(byte[] request) {
+		return null;
+	}
+	
+	public String unmarshal() {
+		return "";
+	}
+	
+	public void test() {
+		NodeList structureFormatList = responseFormatXml.getElementsByTagName("StructFormat");
+		for (int i = 0; i < structureFormatList.getLength(); i++) {
+			Node structureFormat = structureFormatList.item(i);
+			System.out.println(b);
+		}
+		
+	}
+}

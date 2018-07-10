@@ -1,0 +1,39 @@
+package com.profisien.as400.converter;
+
+import java.io.InputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.apache.camel.CamelContext;
+import org.springframework.stereotype.Component;
+import org.w3c.dom.Element;
+
+@Component
+public class As400Converter {
+	
+	public As400Converter(CamelContext camelContext) {
+		
+		InputStream requestInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		
+		
+		InputStream responseInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		
+
+	}
+	
+	private void parseRequestFormater(InputStream xmlFile) {
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		Element requestFormatXml = dBuilder.parse(responseInputStream).getDocumentElement();
+		requestFormatXml.normalize();
+	}
+	
+	private void parseResponseFormater(InputStream xmlFile) {
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		this.responseFormatXml = dBuilder.parse(requestInputStream).getDocumentElement();
+		this.responseFormatXml.normalize();
+	}
+	
+}

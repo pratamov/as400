@@ -1,0 +1,66 @@
+package com.profisien.as400.component;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.apache.camel.CamelContext;
+import org.springframework.stereotype.Component;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+@Component("socketConnection")
+public class SocketConnection {
+
+	private final Element requestFormatXml;
+	private final Element responseFormatXml;
+	
+	public SocketConnection(CamelContext camelContext) throws IOException, ParserConfigurationException, SAXException {
+		
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+		
+		InputStream requestInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		this.responseFormatXml = dBuilder.parse(requestInputStream).getDocumentElement();
+		
+		InputStream responseInputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		this.requestFormatXml = dBuilder.parse(responseInputStream).getDocumentElement();
+		
+	}
+	
+	public byte[] marshal() {
+		return null;
+	}
+	
+	public byte[] invoke(byte[] request) {
+		return null;
+	}
+	
+	public String unmarshal() {
+		return "";
+	}
+	
+	public void test() {
+		NodeList structureFormatList = responseFormatXml.getChildNodes();
+		for (int i = 0; i < structureFormatList.getLength(); i++) {
+			
+			Element structureFormat = (Element) structureFormatList.item(i);
+			
+			System.out.println(structureFormat.getAttribute("name"));
+			
+			NodeList fieldFormatList = structureFormat.getChildNodes();
+			for (int j = 0; j < fieldFormatList.getLength(); j++) {
+				
+				Node fieldFormat = fieldFormatList.item(j);
+				System.out.println(j + fieldFormat.getLocalName());
+				
+			}
+		}
+	}
+}

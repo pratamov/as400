@@ -1,0 +1,21 @@
+package com.profisien.as400.converter;
+
+import org.apache.camel.CamelContext;
+import org.springframework.stereotype.Component;
+
+@Component
+public class As400Converter {
+	
+	public As400Converter(CamelContext camelContext) {
+		
+	}
+	
+	private void parseRequestFormater() {
+		
+	}
+	
+	private void parseResponseFormater() {
+		
+	}
+	
+}

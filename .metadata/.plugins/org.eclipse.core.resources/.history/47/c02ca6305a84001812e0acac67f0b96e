@@ -1,0 +1,12 @@
+package com.profisien.as400.converter;
+
+import org.w3c.dom.Element;
+
+public class ConverterFactory {
+
+	public void build(Element field) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

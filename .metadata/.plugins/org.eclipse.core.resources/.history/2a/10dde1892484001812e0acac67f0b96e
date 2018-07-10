@@ -1,0 +1,47 @@
+package com.profisien.as400;
+
+import java.net.Socket;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+
+@Component
+public class As400ClientRoute extends RouteBuilder {
+
+	@Override
+	public void configure() throws Exception {
+		
+		from("timer://foo?period=6000").process(new Processor() {
+
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				
+				Socket socket = new Socket("localhost", PORT);
+				DataOutputStream dout = new DataOutputStream(socket.getOutputStream());
+				DataInputStream din = new DataInputStream(socket.getInputStream());
+
+				byte[] request = doRequest();
+				dout.write(request);
+				dout.flush();
+				
+				int length = din.readInt();
+				if (length > 0) {
+					byte[] resbyte = new byte[length];
+					din.read(resbyte);
+					System.out.println("Reply from Server: " + new String(resbyte, Charset.forName("IBM285")));
+				}
+				else {
+					System.out.println("something wrong");
+				}
+				
+				socket.close();
+				
+			}
+			
+		});
+		
+	}
+
+}

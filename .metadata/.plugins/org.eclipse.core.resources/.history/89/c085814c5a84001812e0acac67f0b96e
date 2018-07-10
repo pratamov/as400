@@ -1,0 +1,13 @@
+package com.profisien.as400.converter;
+
+import org.w3c.dom.Element;
+
+public class ConverterFactory {
+
+	public Converter build(Element field) {
+		
+		
+		
+	}
+	
+}

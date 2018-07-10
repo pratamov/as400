@@ -1,0 +1,17 @@
+package com.profisien.as400.converter;
+
+public class BinaryHexConverter implements Converter {
+
+	@Override
+	public String unmarshal(byte[] input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public byte[] marshal(String input) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

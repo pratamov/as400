@@ -1,0 +1,31 @@
+package com.profisien.as400.component;
+
+import java.io.InputStream;
+
+import org.apache.camel.CamelContext;
+import org.apache.commons.io.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("socketConnection")
+public class SocketConnection {
+	
+	private static int i = 0;
+	
+	@Autowired
+	CamelContext camelContext;
+	
+	public int increment() {
+		
+		
+		
+		i++;
+		return i;
+	}
+	
+	public String getResponseFormat() {
+		InputStream is = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		String theString = IOUtils.toString(inputStream, encoding);
+	}
+	
+}

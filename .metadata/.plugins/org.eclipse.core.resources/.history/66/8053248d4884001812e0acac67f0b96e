@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<group name="SocketHeader">
+		<field name="SKTHEAD" type="9B">5</field>
+		<SKTDEVN type="C">5</SKTDEVN>
+		<SKTSKNB type="C">5</SKTSKNB>
+		<SKTPORT type="9B">5</SKTPORT>
+		<SKTFILL type="9B">5</SKTFILL>
+	</group>
+</message>

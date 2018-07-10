@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 2 resources" deleteContents="true" description="Delete 2 resources" element1="/as400-client" element2="/camel-as400-socket" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1531206400404"/>&#x0A;<refactoring comment="Delete resource &apos;AS400-server-simulator&apos;" deleteContents="true" description="Delete resource &apos;AS400-server-simulator&apos;" element1="/AS400-server-simulator" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1531207207167"/>
+</session>

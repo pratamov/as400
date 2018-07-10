@@ -1,0 +1,26 @@
+package com.profisien.as400.converter;
+
+import org.w3c.dom.Element;
+
+public class ConverterFactory {
+
+	public Converter build(Element field) {
+		
+		String type = field.getAttribute("type");
+		int length = Integer.parseInt(field.getAttribute("length"));
+		String defaultValue = field.getAttribute("defaultValue");
+		
+		switch (type) {
+			case "EBCDIC":
+				return new EbdicConverter(length);
+			case "UPacked":
+				return new UpackedConverter(length);
+			case "BinaryHex":
+				return new BinaryHexConverter(length);
+			default:
+				return new EbdicConverter(length);
+		}
+		
+	}
+	
+}

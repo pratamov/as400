@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<group name="SocketHeader">
+		<field name="SKTHEAD" type="EBCDIC" length="5"/>
+		<field name="SKTDEVN" type="EBCDIC" length="15"/>
+		<field name="SKTSKNB" type="UPacked" length="5"/>
+		<field name="SKTPORT" type="UPacked" length="3"/>
+		<field name="SKTDEVN" type="EBCDIC" length="1"/>
+	</group>
+</message>

@@ -1,0 +1,5 @@
+package com.profisien.as400.component;
+
+public class SocketConnection {
+
+}

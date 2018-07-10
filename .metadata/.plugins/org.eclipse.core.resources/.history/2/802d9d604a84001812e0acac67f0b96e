@@ -1,0 +1,25 @@
+package com.profisien.as400;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.Socket;
+import java.nio.charset.Charset;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+
+import com.profisien.as400.component.SocketConnection;
+
+@Component
+public class As400ClientRoute extends RouteBuilder {
+
+	@Override
+	public void configure() throws Exception {
+		
+		from("timer://foo?period=6000").bean(new SocketConnection(), "increment").to("log:bar");
+		
+	}
+
+}

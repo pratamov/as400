@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageFormat name='BRIABCSRES2' version='2.02'>
+    <StructFormat name='SocketHeader' delimOptional='y'>
+        <FieldFormat name='SKTHEAD' type='EBCDIC' delimOptional='y' length='5' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='SKTDEVN' type='EBCDIC' delimOptional='y' length='15' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='SKTSKNB' type='UPacked' delimOptional='y' length='5' strlenInChars='n'/>
+        <FieldFormat name='SKTPORT' type='UPacked' delimOptional='y' length='3' strlenInChars='n'/>
+        <FieldFormat name='SKTFILL' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+    </StructFormat>
+    <StructFormat name='MiddlewareHeader' delimOptional='y'>
+        <FieldFormat name='HEADERLENGTH' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='MESSAGELENGTH' type='EBCDIC' delimOptional='y' length='6' strlenInChars='n'/>
+        <FieldFormat name='VERSION' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='HEADERFORMATID' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='DATAFORMATID' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='SOURCEID' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='DESTINATIONID' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue='   ' pad=' ' padType='trailing'/>
+        <FieldFormat name='ROUTING' type='EBCDIC' delimOptional='y' length='6' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='MESSAGESTATUS' type='EBCDIC' delimOptional='y' length='8' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='BANKID' type='EBCDIC' delimOptional='y' length='11' strlenInChars='n'/>
+        <FieldFormat name='NODE' type='EBCDIC' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='EXCHANGEID' type='EBCDIC' delimOptional='y' length='20' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='SCENARIONO' type='EBCDIC' delimOptional='y' length='16' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='TRANCODE' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='RETRIEVEREFNO' type='EBCDIC' delimOptional='y' length='22' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='ACQUIRERREFNO' type='EBCDIC' delimOptional='y' length='12' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='TRANMISSIONNO' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NORECORD' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NOERROR' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='USERID' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='TERMINALID' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='SUPERVISORID' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='MORERECORDINDICATOR' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='CUTOFFINDICATOR' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='USERDATA' type='EBCDIC' delimOptional='y' length='20' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+    </StructFormat>
+    <StructFormat name='Header' delimOptional='y'>
+        <FieldFormat name='ICLEN' type='UBigEndian4' delimOptional='y'/>
+        <FieldFormat name='ICHEAD' type='EBCDIC' delimOptional='y' length='5' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='ICRTRQ' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='ICDEVN' type='EBCDIC' delimOptional='y' length='15' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='MSGNUM' type='EBCDIC' delimOptional='y' length='5' strlenInChars='n'/>
+        <FieldFormat name='ICCOMQ' type='EBCDIC' delimOptional='y' length='10' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='ICIPSF' type='UPacked' delimOptional='y' length='5' strlenInChars='n'/>
+        <FieldFormat name='TMTIMIN' type='EBCDIC' delimOptional='y' length='6' strlenInChars='n'/>
+        <FieldFormat name='TMTXTYP' type='EBCDIC' delimOptional='y' length='5' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+        <FieldFormat name='ICRSV1' type='UPacked' delimOptional='y' length='5' strlenInChars='n'/>
+        <FieldFormat name='ICEOM' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n' defaultValue=' ' pad=' ' padType='trailing'/>
+    </StructFormat>
+    <StructFormat name='Body' delimOptional='y'>
+        <FieldFormat name='tellerid' type='UPacked' delimOptional='y' length='4' strlenInChars='n' defaultValue=''/>
+        <FieldFormat name='seqno' type='UPacked' delimOptional='y' length='4' strlenInChars='n' defaultValue=''/>
+    </StructFormat>
+    <StructFormat name='AB82F1' delimOptional='y'>
+        <FieldFormat name='NewField1' type='UPacked' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField2' type='EBCDIC' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField3' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField4' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField5' type='UPacked' delimOptional='y' length='10' strlenInChars='n'/>
+        <FieldFormat name='NewField6' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField7' type='UPacked' delimOptional='y' length='3' strlenInChars='n'/>
+        <FieldFormat name='NewField8' type='EBCDIC' delimOptional='y' length='20' strlenInChars='n'/>
+        <FieldFormat name='NewField9' type='UPacked' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField10' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField11' type='EBCDIC' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField12' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField13' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField14' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField15' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField16' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField17' type='UPacked' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField18' type='UPacked' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField19' type='UPacked' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField20' type='UPacked' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField21' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField22' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField23' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField24' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField25' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField26' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField27' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField28' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField29' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField30' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField31' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField32' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField33' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField34' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField35' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField36' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField37' type='UPacked' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField38' type='BinaryHex' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField39' type='Packed' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField40' type='Packed' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField41' type='BinaryHex' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField42' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField43' type='BinaryHex' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField44' type='UPacked' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField45' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField46' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField47' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField48' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField49' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField50' type='UPacked' delimOptional='y' length='4' strlenInChars='n' decimalPlaces='6'/>
+        <FieldFormat name='NewField51' type='UPacked' delimOptional='y' length='4' strlenInChars='n' decimalPlaces='6'/>
+        <FieldFormat name='NewField52' type='UPacked' delimOptional='y' length='4' strlenInChars='n' decimalPlaces='6'/>
+        <FieldFormat name='NewField53' type='UPacked' delimOptional='y' length='4' strlenInChars='n' decimalPlaces='6'/>
+        <FieldFormat name='NewField54' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField55' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField56' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField57' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField58' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField59' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField60' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField61' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField62' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField63' type='UPacked' delimOptional='y' length='10' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField64' type='Packed' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField65' type='EBCDIC' delimOptional='y' length='25' strlenInChars='n'/>
+        <FieldFormat name='NewField66' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField67' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField68' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField69' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField70' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField71' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField72' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+    </StructFormat>
+    <StructFormat name='AB82F2' delimOptional='y'>
+        <FieldFormat name='NewField1' type='Packed' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField2' type='EBCDIC' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField3' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField4' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField5' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField6' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField7' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField8' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField9' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField10' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField11' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField12' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField13' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField14' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField15' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField16' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField17' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField18' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField19' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField20' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField21' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField22' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField23' type='Packed' delimOptional='y' length='3' strlenInChars='n'/>
+        <FieldFormat name='NewField24' type='Packed' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField25' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField26' type='UPacked' delimOptional='y' length='5' strlenInChars='n' decimalPlaces='2'/>
+    </StructFormat>
+    <StructFormat name='AB82F3' delimOptional='y'>
+        <FieldFormat name='NewField1' type='Packed' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField2' type='EBCDIC' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField3' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField4' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField5' type='EBCDIC' delimOptional='y' length='40' strlenInChars='n'/>
+        <FieldFormat name='NewField6' type='EBCDIC' delimOptional='y' length='40' strlenInChars='n'/>
+        <FieldFormat name='NewField7' type='EBCDIC' delimOptional='y' length='40' strlenInChars='n'/>
+        <FieldFormat name='NewField8' type='EBCDIC' delimOptional='y' length='40' strlenInChars='n'/>
+        <FieldFormat name='NewField9' type='EBCDIC' delimOptional='y' length='40' strlenInChars='n'/>
+        <FieldFormat name='NewField10' type='EBCDIC' delimOptional='y' length='40' strlenInChars='n'/>
+    </StructFormat>
+    <StructFormat name='AB88F1' delimOptional='y'>
+        <FieldFormat name='NewField1' type='Packed' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField2' type='EBCDIC' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField3' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField4' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField5' type='Packed' delimOptional='y' length='10' strlenInChars='n'/>
+        <FieldFormat name='NewField6' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField7' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField8' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField9' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField10' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField11' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField12' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField13' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField14' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField15' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField16' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField17' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField18' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField19' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField20' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField21' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField22' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField23' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField24' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField25' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField26' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField27' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField28' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField29' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField30' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+    </StructFormat>
+    <StructFormat name='AB90F1' delimOptional='y'>
+        <FieldFormat name='NewField1' type='Packed' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField2' type='EBCDIC' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField3' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField4' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField5' type='Packed' delimOptional='y' length='10' strlenInChars='n'/>
+        <FieldFormat name='NewField6' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField7' type='EBCDIC' delimOptional='y' length='20' strlenInChars='n'/>
+        <FieldFormat name='NewField8' type='Packed' delimOptional='y' length='10' strlenInChars='n'/>
+        <FieldFormat name='NewField9' type='Packed' delimOptional='y' length='6' strlenInChars='n'/>
+        <FieldFormat name='NewField10' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField11' type='BinaryHex' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField12' type='Packed' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField13' type='UPacked' delimOptional='y' length='4' strlenInChars='n' decimalPlaces='6'/>
+        <FieldFormat name='NewField14' type='Packed' delimOptional='y' length='3' strlenInChars='n'/>
+        <FieldFormat name='NewField15' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField16' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField17' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField18' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField19' type='UPacked' delimOptional='y' length='4' strlenInChars='n' decimalPlaces='6'/>
+        <FieldFormat name='NewField20' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField21' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField22' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField23' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField24' type='UPacked' delimOptional='y' length='7' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField25' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField26' type='Packed' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField27' type='Packed' delimOptional='y' length='10' strlenInChars='n'/>
+        <FieldFormat name='NewField28' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField29' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField30' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField31' type='Packed' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField32' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField33' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField34' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField35' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField36' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField37' type='EBCDIC' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField38' type='UPacked' delimOptional='y' length='8' strlenInChars='n' decimalPlaces='2'/>
+        <FieldFormat name='NewField39' type='Packed' delimOptional='y' length='4' strlenInChars='n'/>
+        <FieldFormat name='NewField40' type='Packed' delimOptional='y' length='4' strlenInChars='n'/>
+    </StructFormat>
+    <StructFormat name='ABF1' delimOptional='y'>
+        <FieldFormat name='NewField1' type='Packed' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField2' type='EBCDIC' delimOptional='y' length='2' strlenInChars='n'/>
+        <FieldFormat name='NewField3' type='BinaryHex' delimOptional='y' length='1' strlenInChars='n'/>
+        <FieldFormat name='NewField4' type='EBCDIC' delimOptional='y' length='3' strlenInChars='n'/>
+        <FieldFormat name='NewField5' type='EBCDIC' delimOptional='y' length='20' strlenInChars='n'/>
+        <FieldFormat name='NewField6' type='UPacked' delimOptional='y' length='10' strlenInChars='n' decimalPlaces='2'/>
+    </StructFormat>
+</MessageFormat>

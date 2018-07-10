@@ -1,0 +1,37 @@
+package com.profisien.as400.component;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
+
+import org.apache.camel.CamelContext;
+import org.apache.commons.io.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("socketConnection")
+public class SocketConnection {
+	
+	private static int i = 0;
+	
+	@Autowired
+	CamelContext camelContext;
+	
+	public int increment() {
+		
+		System.out.println(camelContext == null);
+		i++;
+		return i;
+	}
+	
+	public String getResponseFormat() {
+		InputStream inputStream = camelContext.getClassResolver().loadResourceAsStream("response.xml");
+		try {
+			String xml = IOUtils.toString(inputStream, Charset.forName("UTF-8"));
+			return xml;
+		} catch (IOException e) {
+			return "";
+		}
+	}
+	
+}

@@ -1,0 +1,6 @@
+package com.profisien.as400;
+
+@SpringBootApplication
+public class Application {
+	
+}

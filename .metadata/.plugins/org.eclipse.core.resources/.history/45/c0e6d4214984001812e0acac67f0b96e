@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message>
+	<group name="SocketHeader">
+		<field name="SKTHEAD" type="EBCDIC" length="5"/>
+		<field name="SKTDEVN" type="EBCDIC" length="15"/>
+		<field name="SKTSKNB" type="UPacked" length="5"/>
+		<field name="SKTPORT" type="UPacked" length="3"/>
+		<field name="SKTFILL" type="EBCDIC" length="1"/>
+	</group>
+	<group name="MiddlewareHeader">
+		<field name="HEADERLENGTH" type="EBCDIC" length="4"/>
+		<field name="MESSAGELENGTH" type="EBCDIC" length="4"/>
+		<field name="VERSION" type="EBCDIC" length="4"/>
+		<field name="HEADERFORMATID" type="EBCDIC" length="4"/>
+		<field name="DATAFORMATID" type="EBCDIC" length="4"/>
+		<field name="SOURCEID" type="EBCDIC" length="4"/>
+		<field name="DESTINATIONID" type="EBCDIC" length="4"/>
+		<field name="ROUTING" type="EBCDIC" length="4"/>
+		<field name="MESSAGESTATUS" type="EBCDIC" length="4"/>
+		<field name="HEADERLENGTH" type="EBCDIC" length="4"/>
+	</group>
+</message>

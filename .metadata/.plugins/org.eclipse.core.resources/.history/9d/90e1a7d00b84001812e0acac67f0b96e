@@ -1,0 +1,9 @@
+package com.profisien.as400;
+
+import org.apache.camel.builder.RouteBuilder;
+import org.springframework.stereotype.Component;
+
+@Component
+public class As400SocketClientRoute extends RouteBuilder {
+
+}
