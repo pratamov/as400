@@ -70,7 +70,7 @@ public class As400DataFormat {
 		Element responseFormatXml = dBuilder.parse(xmlInputStream).getDocumentElement();
 		responseFormatXml.normalize();
 		
-		NodeList structureFormatList = responseFormatXml.getChildNodes();
+		NodeList structureFormatList = requestFormatXml.getChildNodes();
 		for (int i = 0; i < structureFormatList.getLength(); i++) {
 			Node structureFormat = structureFormatList.item(i);
 			if(structureFormat.getNodeType() == Node.ELEMENT_NODE) {
@@ -79,7 +79,7 @@ public class As400DataFormat {
 					Node fieldFormat = fieldFormatList.item(j);
 					if(fieldFormat.getNodeType() == Node.ELEMENT_NODE) {
 						Element field = (Element) fieldFormat;
-						responseConverters.add(factory.build(field));
+						requestConverters.add(factory.build(field));
 					}
 				}
 			}

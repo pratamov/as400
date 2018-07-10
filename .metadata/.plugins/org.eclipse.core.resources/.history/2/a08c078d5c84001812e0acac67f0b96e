@@ -79,7 +79,7 @@ public class As400DataFormat {
 					Node fieldFormat = fieldFormatList.item(j);
 					if(fieldFormat.getNodeType() == Node.ELEMENT_NODE) {
 						Element field = (Element) fieldFormat;
-						responseConverters.add(factory.build(field));
+						requestConverters.add(factory.build(field));
 					}
 				}
 			}

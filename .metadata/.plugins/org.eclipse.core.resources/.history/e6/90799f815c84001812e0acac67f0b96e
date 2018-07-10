@@ -62,28 +62,10 @@ public class As400DataFormat {
 	}
 	
 	private void parseResponseFormater(InputStream xmlInputStream) throws ParserConfigurationException, SAXException, IOException {
-		
-		ConverterFactory factory = new ConverterFactory();
-		
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 		Element responseFormatXml = dBuilder.parse(xmlInputStream).getDocumentElement();
 		responseFormatXml.normalize();
-		
-		NodeList structureFormatList = responseFormatXml.getChildNodes();
-		for (int i = 0; i < structureFormatList.getLength(); i++) {
-			Node structureFormat = structureFormatList.item(i);
-			if(structureFormat.getNodeType() == Node.ELEMENT_NODE) {
-				NodeList fieldFormatList = structureFormat.getChildNodes();
-				for (int j = 0; j < fieldFormatList.getLength(); j++) {
-					Node fieldFormat = fieldFormatList.item(j);
-					if(fieldFormat.getNodeType() == Node.ELEMENT_NODE) {
-						Element field = (Element) fieldFormat;
-						responseConverters.add(factory.build(field));
-					}
-				}
-			}
-		}
 	}
 	
 }
